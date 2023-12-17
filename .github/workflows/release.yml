@@ -2,7 +2,7 @@ name: Release
 on:
   push:
     branches:
-      - main # branch in which you want the publish to happen
+      - release # branch in which you want the publish to happen
 
 permissions:
   contents: read # for checkout
@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "lts/*"
+          node-version: 'lts/*'
       - name: Install dependencies
         run: npm install
       # - name: Build project
